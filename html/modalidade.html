@@ -1,0 +1,56 @@
+{extends 'base/html'}
+
+    <main class="conteudo">
+        <nav class="trilha"><a href="index.html">Equipes</a> / Futsal</nav>
+
+        <header class="topo">
+            <span class="sobretitulo">Modalidade</span>
+            <h1>Futsal</h1>
+        </header>
+
+        <dl class="numeros">
+            <div>
+                <dt>Tipo</dt>
+                <dd>Coletiva</dd>
+            </div>
+            <div>
+                <dt>Máximo por equipe</dt>
+                <dd>12</dd>
+            </div>
+            <div>
+                <dt>Atletas inscritos</dt>
+                <dd>3</dd>
+            </div>
+        </dl>
+
+        <h2>Atletas inscritos</h2>
+        <div class="tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Equipe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bruno Henrique Costa</td>
+                        <td><a href="equipe.html">Fênix</a></td>
+                    </tr>
+                    <tr>
+                        <td>Davi Lucas Oliveira</td>
+                        <td><a href="equipe.html">Fênix</a></td>
+                    </tr>
+                    <tr>
+                        <td>Pedro Henrique Alves</td>
+                        <td><a href="equipe.html">Tubarões</a></td>
+                    </tr>
+                    <!-- Quando a modalidade não tiver atletas, a tabela deve ter apenas esta linha: -->
+                    <!-- <tr><td class="vazio" colspan="2">Nenhum atleta inscrito nesta modalidade.</td></tr> -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+{extends 'base/html'}
