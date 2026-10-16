@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Futsal | SGJogos</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteudo">
+            <a class="marca" href="index.html">
+                <strong>SGJogos</strong>
+                <span>Jogos Interclasses 2026 · IFRN Campus Pau dos Ferros</span>
+            </a>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Equipes</a></li>
+                    <li><a href="#">Administração</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <header class="topo">
+            <span class="sobretitulo">Jogos Interclasses 2026</span>
+            <h1>Equipes inscritas</h1>
+            <p class="descricao">Conheça as equipes que disputam os Jogos Interclasses do campus.</p>
+        </header>
+
+        <div class="busca">
+            <label for="busca">Buscar equipe</label>
+            <input type="search" id="busca" placeholder="Digite o nome da equipe">
+        </div>
+        
+        {%for equipes in equipes %}
+        <section class="grade" id="lista-equipes">
+            <article class="card" style="border-top-color: #d97706;">
+                <h3>equipes.nome</h3>
+                <dl>
+                    <dt>Curso</dt>
+                    <dd>equipes.curso</dd>
+                    <dt>Técnico</dt>
+                    <dd>equipes.tecnico</dd>
+                    <dt>Atletas</dt>
+                    <dd>3</dd>
+                </dl>
+                <a class="link" href="equipe.html">Ver equipe</a>
+            </article>
+            {% endfor %}
+                {% else %}
+                <p>Sem equipes cadastradas</p>
+            {% endif %}
+                
+        </section>>
+
+        {%for modalidade in modalidade %}
+
+        <h2>Modalidades</h2>
+        <ul class="lista-modalidades">
+            <li><a href="{%url 'modalidade' id%}">modalidade.nome</a></li>
+        </ul>
+    </main>
+
+       <footer class="rodape">
+        <div class="conteudo">
+            <p>SGJogos · Desenvolvimento de Sistemas Web</p>
+            <p>IFRN Campus Pau dos Ferros · 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
+
