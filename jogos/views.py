@@ -10,18 +10,18 @@ def index(request):
         "equipes": equipes,
         "modalidade": modalidade
     }
-    return render (request, "html/index.html", context)
+    return render (request, "index.html", context)
 
 def modalidade(request):
     modalidade = Modalidade.objects.get(id=id)
     context = {
         "modalidade": modalidade
     }
-    return render (request, "html/modalidade.html", context)
+    return render (request, "modalidade.html", context)
 
 def equipe(request):
     equipe = Equipe.objects.get(id=id)
     context = {
         "equipe": equipe
     }
-    return render (request, "html/equipe.html", context)
+    return render (request, "equipe.html", context)

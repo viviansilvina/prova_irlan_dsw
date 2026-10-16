@@ -48,10 +48,7 @@
                 </dl>
                 <a class="link" href="equipe.html">Ver equipe</a>
             </article>
-            {% endfor %}
-                {% else %}
-                <p>Sem equipes cadastradas</p>
-            {% endif %}
+        {% endfor %}
                 
         </section>>
 
@@ -59,8 +56,9 @@
 
         <h2>Modalidades</h2>
         <ul class="lista-modalidades">
-            <li><a href="{%url 'modalidade' id%}">modalidade.nome</a></li>
+            <li><a href="#">modalidade.nome</a></li>
         </ul>
+        {% endfor %}
     </main>
 
        <footer class="rodape">
